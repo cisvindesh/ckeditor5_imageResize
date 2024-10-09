@@ -5,7 +5,7 @@ Instead of being able to resize images by dragging the mouse along the screen, I
 Add the following hook to your custom module. The option will show up, but nothing will happen when you click it.
 
 ### Drupal website info:
-```
+```php
 ➜ web$$$ ddev drush st
 Drupal version   : 10.3.6                                     
 Site URI         : https://d10.ddev.site                      
@@ -35,7 +35,7 @@ Files, Temp      : /tmp
 
 ## Usage/Examples
 
-```javascript
+```php
 /**
 * Implements hook_ckeditor5_plugin_info_alter().
 */
@@ -80,6 +80,6 @@ function mymodule_ckeditor5_plugin_info_alter(array &$plugin_definitions) {
 
 # Solution : 
 
-Apply patch 
-1. git apply ckeditor5_ckeditor5-dll.js.patch
-2. git apply ckeditor5_image.js.patch
+Apply patch: 
+1. ```git apply ckeditor5_ckeditor5-dll.js.patch```
+2. ```git apply ckeditor5_image.js.patch```
