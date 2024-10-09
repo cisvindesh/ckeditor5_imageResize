@@ -78,3 +78,8 @@ function mymodule_ckeditor5_plugin_info_alter(array &$plugin_definitions) {
 }
 ```
 
+# Solution : 
+
+Apply patch 
+1. git apply ckeditor5_ckeditor5-dll.js.patch
+2. git apply ckeditor5_image.js.patch
