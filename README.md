@@ -3,6 +3,36 @@
 Instead of being able to resize images by dragging the mouse along the screen, I need to be able to provide the user with an option to set a specific width for that image (while keeping the aspect ratio). By default, the resize dropdown only provides the 'Original' option to revert it to the original state after manually adjusting the size. By using the hook_ckeditor5_plugin_info_alter() function, I can add specific presets (50px, 100px, 200px, etc.), however, if I add the 'custom' option as mentioned in the CKEditor documentation, nothing happens. The option shows up in the dropdown, I can select it, but the CKEditor input field that is supposed to pop up where you can manually enter a value never shows up. I am also not getting any errors in Watchdog or my console. Since I couldn't find an alternative to setting the height/width of an image, I decided to make this bug post.
 ## Steps to reproduce
 Add the following hook to your custom module. The option will show up, but nothing will happen when you click it.
+
+### Drupal website info:
+```
+➜ web$$$ ddev drush st
+Drupal version   : 10.3.6                                     
+Site URI         : https://d10.ddev.site                      
+DB driver        : mysql                                      
+DB hostname      : db                                         
+DB port          : 3306                                       
+DB username      : db                                         
+DB name          : db                                         
+Database         : Connected                                  
+Drupal bootstrap : Successful                                 
+Default theme    : uswds                                 
+Admin theme      : claro                                      
+PHP binary       : /usr/bin/php8.3                            
+PHP config       : /etc/php/8.3/cli/php.ini                   
+PHP OS           : Linux                                      
+PHP version      : 8.3.10                                     
+Drush script     : /var/www/html/vendor/bin/drush             
+Drush version    : 13.2.0.0                                   
+Drush temp       : /tmp                                       
+Drush configs    : /var/www/html/vendor/drush/drush/drush.yml 
+Install profile  : standard                                   
+Drupal root      : /var/www/html/web                          
+Site path        : sites/default                              
+Files, Public    : sites/default/files                        
+Files, Temp      : /tmp
+```
+
 ## Usage/Examples
 
 ```javascript
