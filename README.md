@@ -85,7 +85,7 @@ Apply patch:
 2. ```git apply ckeditor5_image.js.patch```
 
 ## "file-mapping" OR copy files through composer.js
-'''
+```php
 "extra": {
         "drupal-scaffold": {
             "locations": {
@@ -118,4 +118,4 @@ Apply patch:
             "web/core": [
                 "type:drupal-core"
             ],
-            ```
+```
