@@ -121,6 +121,13 @@ Apply patch:
 ```
 
 ## Apply patch
+The process involves using Composer to apply the patch. It is also necessary to install the following package if your project doesn't already contain it:
+```
+composer require cweagans/composer-patches
+```
+
+Add code in composer.json file
+
 ```php
 "extra": {
         "enable-patching": true,
