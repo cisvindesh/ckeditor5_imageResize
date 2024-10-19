@@ -119,3 +119,18 @@ Apply patch:
                 "type:drupal-core"
             ],
 ```
+
+## Apply patch
+```php
+"extra": {
+        "enable-patching": true,
+        "patches": {
+            "drupal/core": {
+                "Ckeditor5 image resize custom option - patch-cke_image": "../ckeditor5-image-resize/cke_image.js.patch",
+                "Ckeditor5 image resize custom option - patch-cke_heading": "../ckeditor5-image-resize/cke_heading.js.patch",
+                "Ckeditor5 image resize custom option - patch-cke_editor-classic": "../ckeditor5-image-resize/cke_editor-classic.js.patch",
+                "Ckeditor5 image resize custom option - patch-cke_ckeditor5-dll": "../ckeditor5-image-resize/cke_ckeditor5-dll.js.patch"
+            }
+        }
+}
+```
