@@ -83,3 +83,39 @@ function mymodule_ckeditor5_plugin_info_alter(array &$plugin_definitions) {
 Apply patch: 
 1. ```git apply ckeditor5_ckeditor5-dll.js.patch```
 2. ```git apply ckeditor5_image.js.patch```
+
+## "file-mapping" OR copy files through composer.js
+'''
+"extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            },
+            "file-mapping": {
+                "[web-root]/core/assets/vendor/ckeditor5/image/image.js": {
+                    "mode": "replace",
+                    "path": "./patches/image.js",
+                    "overwrite": true
+                    },
+                "[web-root]/core/assets/vendor/ckeditor5/heading/heading.js": {
+                    "mode": "replace",
+                    "path": "./patches/heading.js",
+                    "overwrite": true
+                    },
+                "[web-root]/core/assets/vendor/ckeditor5/ckeditor5-dll/ckeditor5-dll.js": {
+                    "mode": "replace",
+                    "path": "./patches/ckeditor5-dll.js",
+                    "overwrite": true
+                    },
+                "[web-root]/core/assets/vendor/ckeditor5/editor-classic/editor-classic.js": {
+                    "mode": "replace",
+                    "path": "./patches/editor-classic.js",
+                    "overwrite": true
+                    }
+            }
+        },
+        "installer-paths": {
+            "web/core": [
+                "type:drupal-core"
+            ],
+            ```
